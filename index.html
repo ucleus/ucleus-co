@@ -623,12 +623,16 @@
         // Navigation scroll effect
         function handleNavScroll() {
             const nav = document.getElementById('mainNav');
+            const hero = document.getElementById('hero');
             const scrollPosition = window.scrollY;
-            
-            if (scrollPosition > 50) {
-                nav.classList.add('nav-scrolled');
-            } else {
-                nav.classList.remove('nav-scrolled');
+
+            if (nav && hero) {
+                const triggerPoint = hero.offsetHeight - nav.offsetHeight;
+                if (scrollPosition > triggerPoint) {
+                    nav.classList.add('nav-scrolled');
+                } else {
+                    nav.classList.remove('nav-scrolled');
+                }
             }
         }
 
