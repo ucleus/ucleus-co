@@ -1,0 +1,145 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delay {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: -3s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.phase-card {
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+.phase-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.glowing-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.glowing-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.glowing-border:hover::before {
+  left: 100%;
+}
+
+.section-reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.section-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #8b5cf6 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: float 8s ease-in-out infinite;
+}
+
+.shape-1 {
+  top: 10%;
+  left: 10%;
+  width: 80px;
+  height: 80px;
+  background: #3b82f6;
+  animation-delay: 0s;
+}
+.shape-2 {
+  top: 60%;
+  right: 10%;
+  width: 120px;
+  height: 120px;
+  background: #8b5cf6;
+  animation-delay: -2s;
+}
+.shape-3 {
+  bottom: 20%;
+  left: 20%;
+  width: 60px;
+  height: 60px;
+  background: #06b6d4;
+  animation-delay: -4s;
+}
