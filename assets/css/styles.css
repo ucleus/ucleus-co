@@ -112,6 +112,13 @@ body {
   background-clip: text;
 }
 
+.text-gradient-rainbow {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ef4444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .floating-shape {
   position: absolute;
   border-radius: 50%;
@@ -142,4 +149,26 @@ body {
   height: 60px;
   background: #06b6d4;
   animation-delay: -4s;
+}
+
+.nav-transition {
+  transition: all 0.3s ease;
+}
+
+.nav-scrolled .nav-link {
+  color: #1f2937 !important;
+}
+
+.nav-scrolled .nav-link:hover {
+  color: #374151 !important;
+}
+
+.nav-scrolled .nav-brand {
+  color: #1f2937 !important;
+}
+
+.nav-scrolled {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
